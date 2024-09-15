@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "/";
+// Mensaje que el cliente enviará al servidor con el dominio.
+message DomainRequest {
+  string domain = 1; // Campo para recibir el dominio como cadena.
+}
+
+// Mensaje que el servidor devolverá al cliente con una respuesta.
+message DomainResponse {
+  string confirmation = 1; // Campo para devolver la confirmación o respuesta.
+}
+
+// Servicio gRPC que define un método para procesar el dominio.
+service DomainService {
+  // Método RPC que recibe un DomainRequest y devuelve un DomainResponse.
+  rpc ProcessDomain (DomainRequest) returns (DomainResponse);
+}
