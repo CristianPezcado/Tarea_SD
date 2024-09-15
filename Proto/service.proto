@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "/";
+option go_package = "github.com/CristianPezcado/Tarea_SD/proto";
 // Mensaje que el cliente enviará al servidor con el dominio.
 message DomainRequest {
   string domain = 1; // Campo para recibir el dominio como cadena.
