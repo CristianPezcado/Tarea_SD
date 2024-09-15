@@ -1,0 +1,4 @@
+CREATE TABLE dominios (
+    id SERIAL PRIMARY KEY,
+    dominio VARCHAR(255) UNIQUE NOT NULL
+);
